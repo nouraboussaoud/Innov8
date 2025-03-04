@@ -169,47 +169,46 @@
             console.log('WebSocket connection closed');
         });
 
-        // JavaScript for interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the buttons
-            const lessonsBtn = document.getElementById('lessonsBtn');
-            const exercisesBtn = document.getElementById('exercisesBtn');
-            const questionsBtn = document.getElementById('questionsBtn');
+       document.addEventListener('DOMContentLoaded', function() {
+    // Get the buttons
+    const lessonsBtn = document.getElementById('lessonsBtn');
+    const exercisesBtn = document.getElementById('exercisesBtn');
+    const questionsBtn = document.getElementById('questionsBtn');
 
-            // Function to handle button clicks
-            function handleButtonClick(button, pageUrl) {
-                // Remove active class from all buttons
-                lessonsBtn.classList.remove('bg-blue-600', 'text-white');
-                exercisesBtn.classList.remove('bg-blue-600', 'text-white');
-                questionsBtn.classList.remove('bg-blue-600', 'text-white');
+    // Function to handle button clicks
+    function handleButtonClick(button, pageUrl) {
+        // Remove active class from all buttons
+        lessonsBtn.classList.remove('bg-blue-600', 'text-white');
+        exercisesBtn.classList.remove('bg-blue-600', 'text-white');
+        questionsBtn.classList.remove('bg-blue-600', 'text-white');
 
-                // Add active class to the clicked button
-                button.classList.add('bg-blue-600', 'text-white');
+        // Add active class to the clicked button
+        button.classList.add('bg-blue-600', 'text-white');
 
-                // Save the active button in session storage
-                sessionStorage.setItem('activeButton', button.id);
+        // Save the active button in session storage
+        sessionStorage.setItem('activeButton', button.id);
 
-                // Navigate to the specified page
-                window.location.href = pageUrl;
-            }
+        // Navigate to the specified page
+        window.location.href = pageUrl;
+    }
 
-            // Add event listeners to the buttons
-            lessonsBtn.addEventListener('click', () => handleButtonClick(lessonsBtn, 'cour.html'));
-            exercisesBtn.addEventListener('click', () => handleButtonClick(exercisesBtn, 'exercices.html'));
-            questionsBtn.addEventListener('click', () => handleButtonClick(questionsBtn, 'questions.html'));
-            
-            // Set the "Questions" button as active by default
-            questionsBtn.classList.add('bg-blue-600', 'text-white');
-            
-            // Highlight the active button based on session storage
-            const activeButtonId = sessionStorage.getItem('activeButton');
-            if (activeButtonId) {
-                const activeButton = document.getElementById(activeButtonId);
-                if (activeButton) {
-                    activeButton.classList.add('bg-blue-600', 'text-white');
-                }
-            }
-        });
+    // Add event listeners to the buttons
+    lessonsBtn.addEventListener('click', () => handleButtonClick(lessonsBtn, 'cour.html'));
+    exercisesBtn.addEventListener('click', () => handleButtonClick(exercisesBtn, 'exercices.html'));
+    questionsBtn.addEventListener('click', () => handleButtonClick(questionsBtn, 'questions.html'));
+    
+    // Set the "Questions" button as active by default
+    questionsBtn.classList.add('bg-blue-600', 'text-white');
+
+    // Highlight the active button based on session storage
+    const activeButtonId = sessionStorage.getItem('activeButton');
+    if (activeButtonId) {
+        const activeButton = document.getElementById(activeButtonId);
+        if (activeButton) {
+            activeButton.classList.add('bg-blue-600', 'text-white');
+        }
+    }
+});
     </script>
     <footer class="bg-gray-100 py-10">
         <div class="container mx-auto px-4">
