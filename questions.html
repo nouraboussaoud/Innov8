@@ -11,11 +11,22 @@
 <body class="bg-white min-h-screen flex flex-col">
     <!-- Header with "For Students" text -->
     <header class="bg-[#0044b3] p-4">
-        <nav class="flex justify-between items-center">
-            <ul class="left-items flex items-center">
-                <li class="relative mx-4 my-0"><a href="#" class="underlined text-white font-bold">For Students</a></li>
-            </ul>
-            <ul class="right-items flex items-center">
+    <nav class="flex justify-between items-center">
+        <!-- Left section for "For Students" link -->
+        <ul class="left-items flex items-center">
+            <li class="relative mx-4 my-0">
+                <a href="#" class="underlined text-white font-bold">For Students</a>
+            </li>
+        </ul>
+
+        <!-- Right section for icons and user info -->
+        <div class="flex items-center">
+            <!-- Hamburger menu (visible on mobile) -->
+            <button class="lg:hidden text-white text-2xl mr-4" id="menuButton">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="right-items flex items-center hidden lg:flex">
                 <li class="relative mx-4 my-0">
                     <a href="#" class="text-white font-bold">
                         <i class="fas fa-bell text-2xl"></i> <!-- Bell Icon -->
@@ -33,8 +44,19 @@
                     </a>
                 </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div class="lg:hidden bg-[#0044b3] p-4 text-white" id="mobileMenu" style="display: none;">
+        <ul>
+            <li class="my-2"><a href="#" class="block">For Students</a></li>
+            <li class="my-2"><a href="#" class="block">Notifications</a></li>
+            <li class="my-2"><a href="#" class="block">Profile</a></li>
+            <li class="my-2"><a href="#" class="block">Settings</a></li>
+        </ul>
+    </div>
+</header>
 
     <!-- Main content area -->
     <main class="container mx-auto py-6 px-4 flex-grow">
@@ -209,6 +231,13 @@
         }
     }
 });
+       // JavaScript to toggle mobile menu visibility
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
     </script>
     <footer class="bg-gray-100 py-10">
         <div class="container mx-auto px-4">
