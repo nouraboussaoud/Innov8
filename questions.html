@@ -10,33 +10,31 @@
 </head>
 <body class="bg-white min-h-screen flex flex-col">
     <!-- Header with "For Students" text -->
-  <!-- Header with "For Students" text -->
-  <header class="bg-[#0044b3] p-4">
-    <nav class="flex justify-between items-center">
-      <ul class="left-items flex items-center">
-        <li class="relative mx-4 my-0"><a href="#" class="underlined text-white font-bold">For Students</a></li>
-      </ul>
-      <ul class="right-items flex items-center">
-        <li class="relative mx-4 my-0">
-          <a href="#" class="text-white font-bold">
-            <i class="fas fa-bell text-2xl"></i> <!-- Bell Icon -->
-          </a>
-        </li>
-        <div class="text-white text-3xl font-normal">Yessine B.Hamroun</div>
-            
-        <li class="relative mx-4 my-0">
-          <a href="#" class="text-white font-bold">
-            <i class="fas fa-user-circle text-2xl"></i> <!-- User Circle Icon -->
-          </a>
-        </li>
-        <li class="relative mx-4 my-0">
-          <a href="#" class="text-white font-bold">
-            <i class="fas fa-cog text-2xl"></i> <!-- Cog Icon -->
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header class="bg-[#0044b3] p-4">
+        <nav class="flex justify-between items-center">
+            <ul class="left-items flex items-center">
+                <li class="relative mx-4 my-0"><a href="#" class="underlined text-white font-bold">For Students</a></li>
+            </ul>
+            <ul class="right-items flex items-center">
+                <li class="relative mx-4 my-0">
+                    <a href="#" class="text-white font-bold">
+                        <i class="fas fa-bell text-2xl"></i> <!-- Bell Icon -->
+                    </a>
+                </li>
+                <div class="text-white text-3xl font-normal">Yessine B.Hamroun</div>
+                <li class="relative mx-4 my-0">
+                    <a href="#" class="text-white font-bold">
+                        <i class="fas fa-user-circle text-2xl"></i> <!-- User Circle Icon -->
+                    </a>
+                </li>
+                <li class="relative mx-4 my-0">
+                    <a href="#" class="text-white font-bold">
+                        <i class="fas fa-cog text-2xl"></i> <!-- Cog Icon -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Main content area -->
     <main class="container mx-auto py-6 px-4 flex-grow">
@@ -172,21 +170,46 @@
             console.log('WebSocket connection closed');
         });
 
-        // Tab switching functionality
-        const lessonsBtn = document.getElementById('lessonsBtn');
-        const exercisesBtn = document.getElementById('exercisesBtn');
-        const questionsBtn = document.getElementById('questionsBtn');
+        // JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the buttons
+            const lessonsBtn = document.getElementById('lessonsBtn');
+            const exercisesBtn = document.getElementById('exercisesBtn');
+            const questionsBtn = document.getElementById('questionsBtn');
 
-        lessonsBtn.addEventListener('click', () => {
-            window.location.href = 'cour.html';
-        });
+            // Function to handle button clicks
+            function handleButtonClick(button, pageUrl) {
+                // Remove active class from all buttons
+                lessonsBtn.classList.remove('bg-blue-600', 'text-white');
+                exercisesBtn.classList.remove('bg-blue-600', 'text-white');
+                questionsBtn.classList.remove('bg-blue-600', 'text-white');
 
-        exercisesBtn.addEventListener('click', () => {
-            window.location.href = 'exercices.html';
-        });
+                // Add active class to the clicked button
+                button.classList.add('bg-blue-600', 'text-white');
 
-        questionsBtn.addEventListener('click', () => {
-            window.location.href = 'questions.html';
+                // Save the active button in session storage
+                sessionStorage.setItem('activeButton', button.id);
+
+                // Navigate to the specified page
+                window.location.href = pageUrl;
+            }
+
+            // Add event listeners to the buttons
+            lessonsBtn.addEventListener('click', () => handleButtonClick(lessonsBtn, 'cour.html'));
+            exercisesBtn.addEventListener('click', () => handleButtonClick(exercisesBtn, 'exercices.html'));
+            questionsBtn.addEventListener('click', () => handleButtonClick(questionsBtn, 'questions.html'));
+            
+            // Set the "Questions" button as active by default
+            questionsBtn.classList.add('bg-blue-600', 'text-white');
+            
+            // Highlight the active button based on session storage
+            const activeButtonId = sessionStorage.getItem('activeButton');
+            if (activeButtonId) {
+                const activeButton = document.getElementById(activeButtonId);
+                if (activeButton) {
+                    activeButton.classList.add('bg-blue-600', 'text-white');
+                }
+            }
         });
     </script>
 </body>
