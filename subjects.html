@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects List</title>
+  <link rel="stylesheet" href="output.css?v=1.0.1">
+</head>
+<body class="text-base text-[#333] font-sans">
+<!-- Header with "For Students" text -->
+<header class="bg-[#0044b3] p-4">
+  <nav class="flex justify-between items-center">
+    <ul class="left-items flex items-center">
+      <li class="relative mx-4 my-0"><a href="#" class="underlined text-white font-bold">For Students</a></li>
+    </ul>
+    <ul class="right-items flex items-center">
+      <li class="relative mx-4 my-0">
+        <a href="#" class="text-white font-bold">
+          <i class="fas fa-bell text-2xl"></i> <!-- Bell Icon -->
+        </a>
+      </li>
+      <div class="text-white text-3xl font-normal">Yessine B.Hamroun</div>
+          
+      <li class="relative mx-4 my-0">
+        <a href="#" class="text-white font-bold">
+          <i class="fas fa-user-circle text-2xl"></i> <!-- User Circle Icon -->
+        </a>
+      </li>
+      <li class="relative mx-4 my-0">
+        <a href="#" class="text-white font-bold">
+          <i class="fas fa-cog text-2xl"></i> <!-- Cog Icon -->
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 class="text-[2rem] mb-4 px-8 py-16">Subjects List</h1>
+  <div class="search-container flex justify-center mb-8">
+    <input type="text" placeholder="Search anything here." class="border rounded w-[300px] px-4 py-2 border-solid border-[#ccc]" />
+    <button class="search-button bg-[#0044b3] text-white rounded cursor-pointer px-4 py-2 border-[none]">🔍</button>
+  </div>
+
+  <div class="subject-grid grid grid-cols-[repeat(4,1fr)] gap-4 px-8 py-16">
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">UX Design</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Web Integration</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Advanced Operating Systems</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Advanced Cloud Systems</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Server Side Applications</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s]p-6 hover:translate-y-[-5px]">Client Side Applications</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Data Base Administration</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Big Data</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">Machine Learning</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">English</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]">French</div>
+    <div class="subject-card rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-bold cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px]"><a href="cour.html">SEA</a></div>
+  </div>
+
+  <div class="pagination flex justify-center mt-8">
+    <button class="pagination-button bg-white text-[#0044b3] border rounded cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2 my-0 px-4 py-2 border-solid border-[#0044b3]">&lt;</button>
+    <button class="pagination-button active bg-[#0044b3] text-white border rounded cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2 my-0 px-4 py-2 border-solid border-[#0044b3]">1</button>
+    <button class="pagination-button bg-white text-[#0044b3] border rounded cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2 my-0 px-4 py-2 border-solid border-[#0044b3]">2</button>
+    <button class="pagination-button bg-white text-[#0044b3] border rounded cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2 my-0 px-4 py-2 border-solid border-[#0044b3]">3</button>
+    <button class="pagination-button bg-white text-[#0044b3] border rounded cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2 my-0 px-4 py-2 border-solid border-[#0044b3]">&gt;</button>
+  </div>
+</main>
+<br>
+<br>
+<footer class="bg-gray-100 py-10">
+  <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between text-center md:text-left space-y-6 md:space-y-0">
+          
+          <!-- Section Innov8 -->
+          <div>
+              <ul class="mt-2 space-y-1">
+                <h3 class="font-bold text-lg">Innov8</h3>
+                  <li><a href="#" class="text-gray-600 hover:text-gray-900">About</a></li>
+                  <li><a href="#" class="text-gray-600 hover:text-gray-900">Our Features</a></li>
+                  <li><a href="#" class="text-gray-600 hover:text-gray-900">Why Choose Innov8</a></li>
+                  <li><a href="#" class="text-gray-600 hover:text-gray-900">Innov8 Plus</a></li>
+              </ul>
+          </div>
+
+          <!-- Section Location -->
+          <div>
+              <h3 class="font-bold text-lg">Where to find us</h3>
+              <p class="text-gray-600 mt-2">Esprit Bloc G, Ariana Soghra</p>
+          </div>
+
+          <!-- Section Contact -->
+          <div>
+              <h3 class="font-bold text-lg">Contact</h3>
+              <p class="text-gray-600 mt-2">innovo.contact@innov8.com</p>
+              <div class="flex justify-center md:justify-start space-x-4 mt-3">
+                  <a href="#"><img src="img/facebook_5968764.png" style="height: 48px; width: 48px" alt="Facebook"></a>
+                  <a href="#"><img src="img/icons8-instagram-48.png" class="h-10 w-10" alt="Instagram"></a>
+                  <a href="#"><img src="img/icons8-linkedin-48.png" class="h-10 w-10" alt="LinkedIn"></a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="text-center text-gray-500 text-sm mt-6">
+          &copy; 2025 Innov8 Inc. All rights reserved.
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>
