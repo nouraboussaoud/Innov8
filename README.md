@@ -27,9 +27,10 @@ This repository contains the latest **developments** and **contributions** from 
 ## 🚀 Getting Started
 To clone this repository, use:
 ```sh
-git clone https://github.com/Yessine-BenHamroun/Integration-Web.git
+git clone https://github.com/nouraboussaoud/Innov8.git
 ```
 
+🔗 **Live Demo:** [Innov8 Project](https://nouraboussaoud.github.io/Innov8/)
 
 ## 🤝 Contributing
 We welcome contributions from all team members. Please follow best practices and submit a pull request with clear commit messages. ✅
